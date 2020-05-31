@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StonlyLibraryExample</string>
+    <string name="guide_one_btn">Guide 1 - Modal</string>
+    <string name="guide_two_btn">Guide 2 - Modal - custom height</string>
+    <string name="guide_three_btn">Guide 3 - Layout</string>
+    <string name="kb_one_btn">Knowledge base 1 - Modal - only fullscreen</string>
+    <string name="kb_two_btn">Knowledge base 2 - Layout</string>
+</resources>
