@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setUpListeners()
+        savedInstanceState?.let {
+            return
+        }
         Stonly.initialize("0041028e-a25b-11e9-a307-06e18af4fc90")
         Stonly.stateListener = object : StonlyDataStateListener {
             override fun onStateChanged(state: StonlyDataState) {
