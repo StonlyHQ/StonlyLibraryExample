@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatTextView
 import com.stonly.widget.core.Stonly
 import com.stonly.widget.core.config.GuideConfig
 import com.stonly.widget.core.config.KnowledgeConfig
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setUpListeners()
+        findViewById<AppCompatTextView>(R.id.version_text).text = Stonly.version
         savedInstanceState?.let {
             return
         }
