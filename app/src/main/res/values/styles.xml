@@ -5,7 +5,20 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@android:color/white</item>
     </style>
 
+    <style name="main_menu_button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_marginTop">@dimen/main_page_vertical_btn_margin</item>
+        <item name="android:textColor">@color/btn_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
 </resources>

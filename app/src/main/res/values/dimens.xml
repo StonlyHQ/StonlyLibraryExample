@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="main_page_vertical_btn_margin">30dp</dimen>
+    <dimen name="main_page_vertical_btn_margin">16dp</dimen>
+    <dimen name="small_image_size">16dp</dimen>
+    <dimen name="small_padding">3dp</dimen>
 </resources>

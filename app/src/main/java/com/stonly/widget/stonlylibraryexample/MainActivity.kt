@@ -13,7 +13,6 @@ import com.stonly.widget.core.events.StonlyEventsListener
 import com.stonly.widget.core.state.StonlyDataState
 import com.stonly.widget.core.state.StonlyDataStateListener
 import com.stonly.widget.ui.StonlyDialogFragment
-import com.stonly.widget.ui.StonlyWidgetView
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,34 +40,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpListeners() {
-        findViewById<Button>(R.id.guide_one_btn).setOnClickListener {
+        findViewById<Button>(R.id.modal_btn).setOnClickListener {
             val guideConfig = GuideConfig("197")
             val stonlyDialogFragment: StonlyDialogFragment = StonlyDialogFragment.getGuideInstance(guideConfig)
             stonlyDialogFragment.showStonlyWidget(supportFragmentManager, TAG)
         }
 
-        findViewById<Button>(R.id.guide_two_btn).setOnClickListener {
-            val guideConfig = GuideConfig("137")
-            val stonlyDialogFragment = StonlyDialogFragment.getGuideInstance(guideConfig, StonlyWidgetConfig(peekHeight = 450F))
+        findViewById<Button>(R.id.fullscreen_btn).setOnClickListener {
+            val guideConfig = GuideConfig("197")
+            val stonlyDialogFragment = StonlyDialogFragment.getGuideInstance(guideConfig, StonlyWidgetConfig(showOnlyExpanded = true))
             stonlyDialogFragment.showStonlyWidget(supportFragmentManager, TAG)
         }
 
-        findViewById<Button>(R.id.guide_three_btn).setOnClickListener {
-            val stonlyView = findViewById<StonlyWidgetView>(R.id.stonly_view)
-            val guideConfig = GuideConfig("0IVlAoYIG6")
-            stonlyView.showGuide(guideConfig)
-        }
-
-        findViewById<Button>(R.id.kb_one_btn).setOnClickListener {
+        findViewById<Button>(R.id.knowledge_btn).setOnClickListener {
             val knowledgeConfig = KnowledgeConfig("https://stonly.com/", "N4rqeKnu0u")
-            val stonlyDialogFragment = StonlyDialogFragment.getKnowledgeBaseInstance(knowledgeConfig, StonlyWidgetConfig(showOnlyExpanded = true))
+            val stonlyDialogFragment = StonlyDialogFragment.getKnowledgeBaseInstance(knowledgeConfig)
             stonlyDialogFragment.showStonlyWidget(supportFragmentManager, TAG)
-        }
-
-        findViewById<Button>(R.id.kb_two_btn).setOnClickListener {
-            val stonlyView = findViewById<StonlyWidgetView>(R.id.stonly_view)
-            val knowledgeConfig = KnowledgeConfig("https://teal.stonly.com/", "HOMEMc8onk")
-            stonlyView.showKnowledgeBase(knowledgeConfig)
         }
     }
 

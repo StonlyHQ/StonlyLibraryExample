@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">StonlyLibraryExample</string>
-    <string name="guide_one_btn">Guide 1 - Modal</string>
-    <string name="guide_two_btn">Guide 2 - Modal - custom height</string>
-    <string name="guide_three_btn">Guide 3 - Layout</string>
-    <string name="kb_one_btn">Knowledge base 1 - Modal - only fullscreen</string>
-    <string name="kb_two_btn">Knowledge base 2 - Layout</string>
+    <string name="app_name">Stonly Android library</string>
+    <string name="open_modal_view">Open modal view</string>
+    <string name="open_full_screen_view">Open full-screen view</string>
+    <string name="open_knowledge_base">Open Knowledge base</string>
+    <string name="powered_by_stonly">Powered by Stonly</string>
 </resources>

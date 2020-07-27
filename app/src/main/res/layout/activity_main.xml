@@ -4,18 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/version_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="3dp"
+        android:padding="@dimen/small_padding"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="version 1.0.0"/>
+        tools:text="version 1.0.0" />
+
+    <ImageView
+        android:id="@+id/powered_by_stonly_image"
+        android:layout_width="@dimen/small_image_size"
+        android:layout_height="@dimen/small_image_size"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_powered_by_stonly"
+        app:layout_constraintBottom_toBottomOf="@+id/powered_by_stonly_text"
+        app:layout_constraintEnd_toStartOf="@+id/powered_by_stonly_text"
+        app:layout_constraintTop_toTopOf="@+id/powered_by_stonly_text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/powered_by_stonly_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_horizontal"
+        android:text="@string/powered_by_stonly"
+        android:textColor="@color/footer_color"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -24,57 +48,35 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:paddingTop="8dp"
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/guide_one_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/main_page_vertical_btn_margin"
-                android:text="@string/guide_one_btn"
+                android:id="@+id/modal_btn"
+                style="@style/main_menu_button"
+                android:drawableLeft="@drawable/ic_modal"
+                android:text="@string/open_modal_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/guide_two_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/main_page_vertical_btn_margin"
-                android:text="@string/guide_two_btn"
+                android:id="@+id/fullscreen_btn"
+                style="@style/main_menu_button"
+                android:drawableLeft="@drawable/ic_full_screen"
+                android:text="@string/open_full_screen_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/guide_one_btn" />
+                app:layout_constraintTop_toBottomOf="@+id/modal_btn" />
 
             <Button
-                android:id="@+id/guide_three_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/main_page_vertical_btn_margin"
-                android:text="@string/guide_three_btn"
+                android:id="@+id/knowledge_btn"
+                style="@style/main_menu_button"
+                android:drawableLeft="@drawable/ic_book"
+                android:text="@string/open_knowledge_base"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/guide_two_btn" />
-
-            <Button
-                android:id="@+id/kb_one_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/main_page_vertical_btn_margin"
-                android:text="@string/kb_one_btn"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/guide_three_btn" />
-
-            <Button
-                android:id="@+id/kb_two_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/main_page_vertical_btn_margin"
-                android:text="@string/kb_two_btn"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/kb_one_btn" />
+                app:layout_constraintTop_toBottomOf="@+id/fullscreen_btn" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
