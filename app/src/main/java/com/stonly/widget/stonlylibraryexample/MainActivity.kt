@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.knowledge_btn).setOnClickListener {
             val knowledgeConfig = KnowledgeConfig("https://stonly.com/", "N4rqeKnu0u")
-            val stonlyDialogFragment = StonlyDialogFragment.getKnowledgeBaseInstance(knowledgeConfig)
+            val stonlyDialogFragment = StonlyDialogFragment.getKnowledgeBaseInstance(knowledgeConfig,  StonlyWidgetConfig(showOnlyExpanded = true))
             stonlyDialogFragment.showStonlyWidget(supportFragmentManager, TAG)
         }
     }
