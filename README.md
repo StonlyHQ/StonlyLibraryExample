@@ -28,7 +28,7 @@ and add dependency to library
 
 ```
 dependencies {
-    implementation 'com.stonly:integration:1.0.0'
+    implementation 'com.stonly:integration:1.0.2'
     ....
     }
 ```
