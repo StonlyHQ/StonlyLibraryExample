@@ -8,7 +8,8 @@ allprojects {
         google()
         jcenter()
         maven {
-            url  "https://dl.bintray.com/stonly/androidIntegration"
+            url 'https://jitpack.io'
+            credentials { username 'jp_uj80hru4pd589huau488qbun6d' }
         }
     }
 }
@@ -28,7 +29,7 @@ and add dependency to library
 
 ```
 dependencies {
-    implementation 'com.stonly:integration:1.0.2'
+    implementation 'org.bitbucket.stonlydev:stonly-android-library:1.0.3'
     ....
     }
 ```
