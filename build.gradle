@@ -21,8 +21,7 @@ allprojects {
         google()
         jcenter()
         maven {
-            url 'https://jitpack.io'
-            credentials { username 'jp_uj80hru4pd589huau488qbun6d' }
+            url 'https://stonly.jfrog.io/artifactory/stonly-gradle-release'
         }
     }
 }
